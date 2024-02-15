@@ -1,6 +1,5 @@
 package com.fan3bian.service;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,6 +10,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloService {
 
-    @Value("${ordinaryDeliveryTaskSubTypeCode}")
-    private int ordinaryDeliveryTaskSubTypeCode = 2232;
+    public String sayHello() {
+        return "Hello";
+    }
+    public String sayHello(String name) {
+        return "Hello: " + name;
+    }
 }
